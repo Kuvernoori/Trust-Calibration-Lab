@@ -21,4 +21,6 @@ public static class AnswerKey
         [3009] = ("False", "EF Core parameterizes this LINQ query."),
         [3010] = ("False", "The requestId is not security-sensitive in this context.")
     };
+    public static readonly IReadOnlyDictionary<string, string> CaseThreeFindings = new Dictionary<string, string>
+    { ["CWE-89"] = "SQL Injection", ["CWE-639"] = "IDOR", ["CWE-22"] = "Path Traversal", ["CWE-328"] = "Weak Password Hashing", ["CWE-916"] = "Weak Password Hashing", ["CWE-798"] = "Hardcoded JWT Secret" };
 }

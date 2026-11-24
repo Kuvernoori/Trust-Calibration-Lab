@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TrustCalibrationLab.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+faab7482d96a1a6e325fbf89b6abf5d40438d7f7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a23887e58542a89ac8e5a0d656507082be64b9d8")]
 [assembly: System.Reflection.AssemblyProductAttribute("TrustCalibrationLab.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TrustCalibrationLab.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

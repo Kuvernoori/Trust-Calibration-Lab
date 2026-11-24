@@ -10,6 +10,7 @@ public sealed class LabDbContext(DbContextOptions<LabDbContext> options) : DbCon
     public DbSet<ReviewComment> ReviewComments => Set<ReviewComment>();
     public DbSet<ReviewSubmission> ReviewSubmissions => Set<ReviewSubmission>();
     public DbSet<ReviewAnswer> ReviewAnswers => Set<ReviewAnswer>();
+    public DbSet<VulnerabilityFinding> VulnerabilityFindings => Set<VulnerabilityFinding>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

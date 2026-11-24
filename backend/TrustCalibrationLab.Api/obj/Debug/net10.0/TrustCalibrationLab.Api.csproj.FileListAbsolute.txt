@@ -67,3 +67,17 @@ C:\Calibrating trust in an AI reviewer during secure development\backend\buildch
 C:\Calibrating trust in an AI reviewer during secure development\backend\buildcheck\TrustCalibrationLab.Api.runtimeconfig.json
 C:\Calibrating trust in an AI reviewer during secure development\backend\buildcheck\TrustCalibrationLab.Api.dll
 C:\Calibrating trust in an AI reviewer during secure development\backend\buildcheck\TrustCalibrationLab.Api.pdb
+C:\Calibrating trust in an AI reviewer during secure development\backend\buildcheck-phase4\appsettings.json
+C:\Calibrating trust in an AI reviewer during secure development\backend\buildcheck-phase4\TrustCalibrationLab.Api.staticwebassets.endpoints.json
+C:\Calibrating trust in an AI reviewer during secure development\backend\buildcheck-phase4\TrustCalibrationLab.Api.exe
+C:\Calibrating trust in an AI reviewer during secure development\backend\buildcheck-phase4\TrustCalibrationLab.Api.deps.json
+C:\Calibrating trust in an AI reviewer during secure development\backend\buildcheck-phase4\TrustCalibrationLab.Api.runtimeconfig.json
+C:\Calibrating trust in an AI reviewer during secure development\backend\buildcheck-phase4\TrustCalibrationLab.Api.dll
+C:\Calibrating trust in an AI reviewer during secure development\backend\buildcheck-phase4\TrustCalibrationLab.Api.pdb
+C:\Calibrating trust in an AI reviewer during secure development\backend\buildcheck-phase4b\appsettings.json
+C:\Calibrating trust in an AI reviewer during secure development\backend\buildcheck-phase4b\TrustCalibrationLab.Api.staticwebassets.endpoints.json
+C:\Calibrating trust in an AI reviewer during secure development\backend\buildcheck-phase4b\TrustCalibrationLab.Api.exe
+C:\Calibrating trust in an AI reviewer during secure development\backend\buildcheck-phase4b\TrustCalibrationLab.Api.deps.json
+C:\Calibrating trust in an AI reviewer during secure development\backend\buildcheck-phase4b\TrustCalibrationLab.Api.runtimeconfig.json
+C:\Calibrating trust in an AI reviewer during secure development\backend\buildcheck-phase4b\TrustCalibrationLab.Api.dll
+C:\Calibrating trust in an AI reviewer during secure development\backend\buildcheck-phase4b\TrustCalibrationLab.Api.pdb
