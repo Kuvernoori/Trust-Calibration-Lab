@@ -20,4 +20,4 @@ cd backend/TrustCalibrationLab.Api
 dotnet run
 ```
 
-The API exposes a minimal health endpoint at `GET /api/health`.
+The API exposes a health endpoint at `GET /api/health` and allows requests from the Vite development server at `http://localhost:5173`.
