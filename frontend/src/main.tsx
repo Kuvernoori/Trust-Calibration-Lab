@@ -6,6 +6,7 @@ import './styles.css'
 import './theme.css'
 import './light.css'
 import './contrast.css'
+import './final-theme.css'
 
 function Shell({ children }: { children: React.ReactNode }) { return <div className="app-frame"><header className="topbar"><div className="brand"><span className="brand-mark">✦</span> trust<span className="accent">/</span>calibration <span className="tag">LAB</span></div></header>{children}</div> }
 
