@@ -60,3 +60,10 @@ C:\Calibrating trust in an AI reviewer during secure development\backend\TrustCa
 C:\Calibrating trust in an AI reviewer during secure development\backend\TrustCalibrationLab.Api\obj\Debug\net10.0\TrustCalibrationLab.Api.pdb
 C:\Calibrating trust in an AI reviewer during secure development\backend\TrustCalibrationLab.Api\obj\Debug\net10.0\TrustCalibrationLab.Api.genruntimeconfig.cache
 C:\Calibrating trust in an AI reviewer during secure development\backend\TrustCalibrationLab.Api\obj\Debug\net10.0\ref\TrustCalibrationLab.Api.dll
+C:\Calibrating trust in an AI reviewer during secure development\backend\buildcheck\appsettings.json
+C:\Calibrating trust in an AI reviewer during secure development\backend\buildcheck\TrustCalibrationLab.Api.staticwebassets.endpoints.json
+C:\Calibrating trust in an AI reviewer during secure development\backend\buildcheck\TrustCalibrationLab.Api.exe
+C:\Calibrating trust in an AI reviewer during secure development\backend\buildcheck\TrustCalibrationLab.Api.deps.json
+C:\Calibrating trust in an AI reviewer during secure development\backend\buildcheck\TrustCalibrationLab.Api.runtimeconfig.json
+C:\Calibrating trust in an AI reviewer during secure development\backend\buildcheck\TrustCalibrationLab.Api.dll
+C:\Calibrating trust in an AI reviewer during secure development\backend\buildcheck\TrustCalibrationLab.Api.pdb

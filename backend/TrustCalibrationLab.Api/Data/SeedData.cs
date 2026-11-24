@@ -8,6 +8,8 @@ public static class SeedData
     public static async Task InitializeAsync(LabDbContext db)
     {
         await db.Database.EnsureCreatedAsync();
+        await db.Database.ExecuteSqlRawAsync("CREATE TABLE IF NOT EXISTS ReviewSubmissions (Id INTEGER PRIMARY KEY AUTOINCREMENT, CaseId INTEGER NOT NULL, SessionId TEXT NOT NULL, Status TEXT NOT NULL, CreatedAt TEXT NOT NULL, UpdatedAt TEXT NOT NULL, SubmittedAt TEXT NULL)");
+        await db.Database.ExecuteSqlRawAsync("CREATE TABLE IF NOT EXISTS ReviewAnswers (Id INTEGER PRIMARY KEY AUTOINCREMENT, ReviewSubmissionId INTEGER NOT NULL, ReviewCommentId INTEGER NOT NULL, Verdict TEXT NOT NULL, Confidence TEXT NOT NULL, EvidenceType TEXT NOT NULL, EvidenceText TEXT NOT NULL, CONSTRAINT FK_ReviewAnswers_ReviewSubmissions_ReviewSubmissionId FOREIGN KEY (ReviewSubmissionId) REFERENCES ReviewSubmissions (Id), CONSTRAINT IX_ReviewAnswers_SubmissionComment UNIQUE (ReviewSubmissionId, ReviewCommentId))");
         if (await db.Cases.AnyAsync()) return;
 
         var cases = new List<Case>
