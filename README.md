@@ -20,4 +20,4 @@ cd backend/TrustCalibrationLab.Api
 dotnet run
 ```
 
-The API exposes a health endpoint at `GET /api/health` and allows requests from the Vite development server at `http://localhost:5173`.
+The frontend uses Vite's HTTP proxy to forward `/api/*` requests to `http://localhost:5070`. The API exposes `GET /api/health` and allows local development origins `http://localhost:5173` and `http://localhost:4173`.

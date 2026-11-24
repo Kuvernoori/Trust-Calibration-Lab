@@ -7,7 +7,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy(FrontendCorsPolicy, policy =>
     {
-        policy.WithOrigins("http://localhost:5173")
+        policy.WithOrigins("http://localhost:5173", "http://localhost:4173")
             .AllowAnyHeader()
             .AllowAnyMethod();
     });
@@ -15,7 +15,6 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-app.UseHttpsRedirection();
 app.UseCors(FrontendCorsPolicy);
 app.MapControllers();
 
