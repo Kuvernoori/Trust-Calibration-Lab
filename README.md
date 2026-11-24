@@ -48,4 +48,8 @@ The frontend uses Vite's HTTP proxy to forward `/api/*` requests to `http://loca
 - `GET /api/cases/{id}/files/{fileId}` — read-only file content
 - `GET /api/cases/{id}/comments` — AI review comments
 
-The SQLite database is initialized and seeded automatically on API startup. Case 1 and Case 2 contain clearly marked demonstration content; Case 3 contains the specified vulnerability and comment dataset. Correct answers are kept in a backend-only answer key and are not returned by student-facing endpoints.
+The SQLite database is initialized and seeded automatically on API startup. All three cases have server-side educational answer keys; correct answers are not returned by student-facing endpoints before submission.
+
+## Deployment
+
+See [DEPLOYMENT.md](./DEPLOYMENT.md) for a complete deployment guide. The recommended Railway-free setup is Vercel for the Vite frontend and Render for the ASP.NET Core API. The frontend uses `VITE_API_BASE_URL` in production, while the API uses `Cors__Origins` for the deployed frontend origin.
