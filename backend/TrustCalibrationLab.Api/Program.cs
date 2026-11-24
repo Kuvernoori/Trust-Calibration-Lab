@@ -26,6 +26,12 @@ using (var scope = app.Services.CreateScope())
 
 app.UseCors(FrontendCorsPolicy);
 app.MapControllers();
+app.MapGet("/", () => Results.Ok(new
+{
+    name = "Trust Calibration Lab API",
+    status = "ok",
+    endpoints = new[] { "/api/health", "/api/cases" }
+}));
 
 app.Run();
 

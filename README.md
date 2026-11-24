@@ -9,6 +9,22 @@ Educational web application for evaluating AI-generated secure code review comme
 
 ## Run locally
 
+### Dependencies
+
+- Node.js 20 or newer and npm.
+- .NET 10 SDK.
+- SQLite is provided through the `Microsoft.EntityFrameworkCore.Sqlite` NuGet package; no separate SQLite server is required.
+
+Check installations:
+
+```powershell
+node --version
+npm --version
+dotnet --version
+```
+
+Run the backend and frontend in two separate terminals.
+
 ```powershell
 cd frontend
 npm install
@@ -19,6 +35,8 @@ npm run dev
 cd backend/TrustCalibrationLab.Api
 dotnet run
 ```
+
+Open `http://localhost:5173`. The API runs at `http://localhost:5070`. On the first backend start, SQLite creates `trust-calibration-lab.db` and seeds the demonstration cases automatically.
 
 The frontend uses Vite's HTTP proxy to forward `/api/*` requests to `http://localhost:5070`. The API exposes `GET /api/health` and allows local development origins `http://localhost:5173` and `http://localhost:4173`.
 
