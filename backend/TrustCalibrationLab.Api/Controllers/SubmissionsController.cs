@@ -53,6 +53,19 @@ public sealed class SubmissionsController(LabDbContext db) : ControllerBase
         return Ok(ToResponse(submission));
     }
 
+    [HttpGet("{id:int}/results")]
+    public async Task<IActionResult> Results(int id)
+    {
+        var submission = await db.ReviewSubmissions.AsNoTracking().Include(item => item.Answers).SingleOrDefaultAsync(item => item.Id == id);
+        if (submission is null) return NotFound();
+        var comments = await db.ReviewComments.AsNoTracking().Where(item => item.CaseId == submission.CaseId).ToListAsync();
+        if (submission.Status != SubmissionStatus.Submitted) return BadRequest(new { message = "Results are available after submission." });
+        if (submission.CaseId != 3) return Ok(new { submission.Id, submission.CaseId, Available = false, SubmittedAnswers = submission.Answers.Count, TotalComments = comments.Count });
+        var feedback = submission.Answers.Select(answer => { var key = AnswerKey.CaseThreeComments[answer.ReviewCommentId]; return new { answer.ReviewCommentId, answer.Verdict, answer.Confidence, answer.EvidenceType, answer.EvidenceText, CorrectVerdict = key.Verdict, IsCorrect = answer.Verdict == key.Verdict, Explanation = key.Explanation, Comment = comments.Single(item => item.Id == answer.ReviewCommentId).Text }; }).ToList();
+        var high = feedback.Where(item => item.Confidence == "High").ToList(); var highErrors = high.Count(item => !item.IsCorrect);
+        return Ok(new { submission.Id, submission.CaseId, Available = true, SubmittedAnswers = feedback.Count, TotalComments = comments.Count, Correct = feedback.Count(item => item.IsCorrect), Incorrect = feedback.Count(item => !item.IsCorrect), PartiallyCorrect = feedback.Count(item => item.CorrectVerdict == "Partially true"), Accuracy = Math.Round(feedback.Count(item => item.IsCorrect) * 100d / feedback.Count, 1), HighConfidenceErrorRate = high.Count == 0 ? (double?)null : Math.Round(highErrors * 100d / high.Count, 1), Answers = feedback });
+    }
+
     private static object ToResponse(ReviewSubmission submission) => new { submission.Id, submission.CaseId, Status = submission.Status.ToString(), submission.CreatedAt, submission.UpdatedAt, submission.SubmittedAt, Answers = submission.Answers.Select(item => new { item.Id, item.ReviewCommentId, item.Verdict, item.Confidence, item.EvidenceType, item.EvidenceText }) };
 }
 

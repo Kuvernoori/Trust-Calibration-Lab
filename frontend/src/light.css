@@ -1,0 +1,27 @@
+.sidebar,.file-panel,.comments-panel{background:#fbfbfa}.workspace-grid{background:#fff}.file-panel,.comments-panel{border-color:#dfe1e4}.code-panel{background:#fafbfc}.code-tab,.panel-heading{border-color:#dfe1e4;color:#69727b}.code-view,.code-line{color:#303840}.line-no{color:#a0a7ad}.code-area{background:#f7f8f9}.code-context,.folder,.folder-child,.file-row{color:#68727b}.comment-row{border-bottom-color:#e2e4e6}
+/* Increased reading scale for classroom projection and laptop viewing. */
+body { font-size: 16px; }
+.brand { font-size: 17px; font-weight: 700; }
+.tag { font-size: 10px; font-weight: 600; }
+.catalog { padding-top: 58px; }
+.catalog-hero h1 { font-size: 46px; font-weight: 700; line-height: 1.08; }
+.catalog-hero p { font-size: 16px; line-height: 1.55; }
+.eyebrow, .case-label, .breadcrumb, .section-kicker, .panel-heading, .toolbar-id { font-size: 11px; font-weight: 600; }
+.catalog-card { padding: 26px; }
+.catalog-card h2 { font-size: 21px; font-weight: 700; }
+.catalog-card p { font-size: 13px; line-height: 1.65; }
+.card-footer { font-size: 11px; }
+.hint-line { font-size: 12px; }
+.workspace-toolbar strong { font-size: 16px; font-weight: 700; }
+.review-progress, .read-only { font-size: 11px; }
+.review-progress span { font-size: 16px; font-weight: 600; }
+.code-tab { font-size: 12px; font-weight: 600; }
+.code-view { font-size: 14px; line-height: 1.7; }
+.line-no { font-size: 12px; }
+.comment-id, .comment-row strong { font-size: 11px; font-weight: 600; }
+.comment-row p { font-size: 13px; line-height: 1.6; }
+.answer-summary { font-size: 11px; }
+.evaluation-form label { font-size: 10px; font-weight: 600; }
+.evaluation-form select, .evaluation-form textarea { font-size: 12px; }
+.save-answer, .submit-review, .back-button { font-size: 12px; font-weight: 600; }
+.state-card, .workspace-state { font-size: 15px; }
