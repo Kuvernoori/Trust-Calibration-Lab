@@ -1,8 +1,12 @@
+using Microsoft.EntityFrameworkCore;
+using TrustCalibrationLab.Api.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 const string FrontendCorsPolicy = "Frontend";
 
 builder.Services.AddControllers();
+builder.Services.AddDbContext<LabDbContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("Default") ?? "Data Source=trust-calibration-lab.db"));
 builder.Services.AddCors(options =>
 {
     options.AddPolicy(FrontendCorsPolicy, policy =>
@@ -14,6 +18,11 @@ builder.Services.AddCors(options =>
 });
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    await SeedData.InitializeAsync(scope.ServiceProvider.GetRequiredService<LabDbContext>());
+}
 
 app.UseCors(FrontendCorsPolicy);
 app.MapControllers();
